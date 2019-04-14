@@ -1,6 +1,7 @@
 {
+  "author": "Dirk Elmendorf <dirk@brokerageengine.com> (https://www.brokerageengine.com)",
   "name": "meme-maker",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "bootstrap": "^4.1.3",
@@ -9,14 +10,24 @@
     "react-scripts": "2.1.1",
     "reactstrap": "^6.5.0"
   },
+  "devDependencies": {
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "prettier": "^1.15.3"
+  },
   "scripts": {
     "start": "react-scripts start",
+    "prettier": "echo 'Applying prettier....' && prettier --write \"{src,test}/**/*.{js,jsx,css,scss,graphql}\" > /dev/null  && exit 0",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "engines": {
+    "node": ">=10.15.2",
+    "npm": ">=6.8"
   },
   "browserslist": [
     ">0.2%",
